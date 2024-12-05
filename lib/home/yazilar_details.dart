@@ -9,7 +9,7 @@ class YazilarDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Ayrıntılar",
+          "Ayrıntılarr",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
