@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sigorta/base_scaffold/bottomNavBar.dart';
+import 'package:flutter_sigorta/home/chatbot/yapayZeka.dart';
+import 'package:flutter_sigorta/home/chatbot/yapayZekadeneme.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BaseScaffold extends StatelessWidget {
@@ -40,7 +42,7 @@ class BaseScaffold extends StatelessWidget {
             icon: FaIcon(FontAwesomeIcons.comments),
             //icon: Icon(Icons.comment_outlined),
             onPressed: () {
-              // İkonun tıklanma işlemleri buraya gelir
+              Navigator.push(context, MaterialPageRoute(builder: (context) => YapayZekaDeneme()));
             },
           ),
         ],
