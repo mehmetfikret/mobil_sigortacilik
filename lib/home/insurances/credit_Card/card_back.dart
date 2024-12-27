@@ -9,11 +9,11 @@ class CardBackView extends StatelessWidget {
   String formattedCVVNumber;
 
   CardBackView({
-    Key? key,
+    super.key,
     required this.cvvNumber,
     required this.formattedCVVNumber,
-  }) : super(key: key) {
-    formattedCVVNumber = this.cvvNumber.padRight(3, '*');
+  }) {
+    formattedCVVNumber = cvvNumber.padRight(3, '*');
   }
 
   @override
@@ -32,18 +32,18 @@ class CardBackView extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
           elevation: 8,
-          margin: EdgeInsets.all(16),
+          margin: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Container(
                 height: 60,
                 color: Colors.black87,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -57,12 +57,12 @@ class CardBackView extends StatelessWidget {
                           width: 200,
                           color: Colors.grey,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 32,
                         ),
                         Text(
                           formattedCVVNumber,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Roboto',
@@ -71,18 +71,18 @@ class CardBackView extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Container(
                       height: 16,
                       color: Colors.black12,
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Container(
                       height: 16,
                       width: 150,
                       color: Colors.black12,
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Container(
                       height: 16,
                       width: 150,

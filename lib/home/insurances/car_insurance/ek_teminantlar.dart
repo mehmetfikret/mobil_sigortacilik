@@ -3,6 +3,8 @@ import 'package:flutter_sigorta/home/insurances/credit_Card/credit_card.dart';
 import 'package:flutter_sigorta/home/insurances/car_insurance/teminant_details.dart';
 
 class EkTeminatlar extends StatefulWidget {
+  const EkTeminatlar({super.key});
+
   @override
   _EkTeminatlarState createState() => _EkTeminatlarState();
 }
@@ -22,7 +24,7 @@ class _EkTeminatlarState extends State<EkTeminatlar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ek Teminatları Seçin'),
+        title: const Text('Ek Teminatları Seçin'),
       ),
       body: SafeArea(
         child: Padding(
@@ -30,29 +32,29 @@ class _EkTeminatlarState extends State<EkTeminatlar> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Ek teminatlar 1 yıl geçerlidir', style: TextStyle(fontSize: 16)),
-              SizedBox(height: 20),
+              const Text('Ek teminatlar 1 yıl geçerlidir', style: TextStyle(fontSize: 16)),
+              const SizedBox(height: 20),
               Card(
                 elevation: 2,
                 child: ListTile(
-                  title: Text('Kaza teminatı'),
-                  subtitle: Text('Bu ek teminat, otomobil sahibinin kaza sonucu yaralanma veya ölümünü kapsar'),
-                  trailing: Text('₺123.00'),
+                  title: const Text('Kaza teminatı'),
+                  subtitle: const Text('Bu ek teminat, otomobil sahibinin kaza sonucu yaralanma veya ölümünü kapsar'),
+                  trailing: const Text('₺123.00'),
                   onTap: _toggleAccidentCover,
                   selected: kazaTeminatiEklendiMi,
                   selectedTileColor: Colors.grey.shade200,
                 ),
               ),           
-              SizedBox(height: 20),
-              Text('Toplam fiyat', style: TextStyle(fontSize: 18)),
-              SizedBox(height: 10),
-              Text('₺${toplamUcret.toStringAsFixed(2)}', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-              Spacer(),
+              const SizedBox(height: 20),
+              const Text('Toplam fiyat', style: TextStyle(fontSize: 18)),
+              const SizedBox(height: 10),
+              Text('₺${toplamUcret.toStringAsFixed(2)}', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              const Spacer(),
               Padding(
-                padding: EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16),
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -66,6 +68,10 @@ class _EkTeminatlarState extends State<EkTeminatlar> {
                                 ),
                               );
                             },
+                            
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 105, 43, 118)),
                             child: Padding(
                               padding: EdgeInsets.symmetric(vertical: 12.0),
                               child: Text(
@@ -74,10 +80,6 @@ class _EkTeminatlarState extends State<EkTeminatlar> {
                                     TextStyle(color: Colors.white, fontSize: 18),
                               ),
                             ),
-                            
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Color.fromARGB(255, 105, 43, 118)),
                           ),
                         ),
                       ],

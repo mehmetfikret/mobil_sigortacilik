@@ -28,9 +28,9 @@ class Search extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: [
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 28,),
+              padding: const EdgeInsets.symmetric(horizontal: 28,),
               child: TextField(
                 style: TextStyle(color: Colors.black.withOpacity(0.7)),
                 decoration: InputDecoration(
@@ -42,11 +42,11 @@ class Search extends StatelessWidget {
                         ),
                     hintText: "Arama",
                     hintStyle: TextStyle(color: Colors.black.withOpacity(0.9)),
-                    prefixIcon: Icon(Icons.search_outlined),
+                    prefixIcon: const Icon(Icons.search_outlined),
                     prefixIconColor: Colors.black.withOpacity(0.9)),
               ),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             /*Expanded(
               child: GridView.builder(
                 padding: const EdgeInsets.fromLTRB(0, 1, 0, 1),

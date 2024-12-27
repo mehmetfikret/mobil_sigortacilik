@@ -10,20 +10,19 @@ class CardFrontView extends StatelessWidget {
   late String _formattedExpiryDate;
 
   CardFrontView(
-      {Key? key, required this.cardNumber, required this.cardHolderName, required this.cardExpiry})
-      : super(key: key) {
-    _formattedCardNumber = this.cardNumber.padRight(16, '*');
+      {super.key, required this.cardNumber, required this.cardHolderName, required this.cardExpiry}) {
+    _formattedCardNumber = cardNumber.padRight(16, '*');
     _formattedCardNumber = _formattedCardNumber.replaceAllMapped(
         RegExp(r".{4}"), (match) => "${match.group(0)} ");
 
     _formattedExpiryDate =
-        this.cardExpiry.replaceAllMapped(RegExp(r".{2}"), (match) => "${match.group(0)}/");
+        cardExpiry.replaceAllMapped(RegExp(r".{2}"), (match) => "${match.group(0)}/");
   }
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width,
       height: size.height * 0.42,
       child: Card(
@@ -31,7 +30,7 @@ class CardFrontView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
         ),
         elevation: 8,
-        margin: EdgeInsets.all(16),
+        margin: const EdgeInsets.all(16),
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Column(
@@ -41,12 +40,12 @@ class CardFrontView extends StatelessWidget {
               Align(
                   alignment: Alignment.topRight,
                   child: Image.asset('assets/images/visa.png')),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Text(
                 _formattedCardNumber,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24,
                   fontFamily: 'Roboto',
                   letterSpacing: 2,
@@ -57,7 +56,7 @@ class CardFrontView extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Row(
@@ -67,12 +66,12 @@ class CardFrontView extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('Kart Sahibi'),
+                        const Text('Kart Sahibi'),
                         Text(
                           cardHolderName,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
+                          style: const TextStyle(
                               letterSpacing: 2,
                               fontSize: 20,
                               fontWeight: FontWeight.w500),
@@ -83,11 +82,11 @@ class CardFrontView extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('Valid/\nTHRU'),
+                      const Text('Valid/\nTHRU'),
                       Text(
                         _formattedExpiryDate,
                         maxLines: 1,
-                        style: TextStyle(                            
+                        style: const TextStyle(                            
                             letterSpacing: 2,
                             fontSize: 20,
                             fontWeight: FontWeight.w500),

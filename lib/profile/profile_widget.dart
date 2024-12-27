@@ -4,10 +4,10 @@ class ProfileWidget extends StatelessWidget {
   final IconData icon;
   final String title;
   const ProfileWidget({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ProfileWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(6),
         color: const Color(0xFFF8F8F8)
       ), 
-      margin: EdgeInsets.all(6),
+      margin: const EdgeInsets.all(6),
       padding: const EdgeInsets.symmetric(vertical: 18),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -33,7 +33,7 @@ class ProfileWidget extends StatelessWidget {
               ),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w600,

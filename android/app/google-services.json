@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "975466675623",
+    "project_id": "flutter-mobil-sigortacilik",
+    "storage_bucket": "flutter-mobil-sigortacilik.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975466675623:android:03bed1dca9b282402dca82",
+        "android_client_info": {
+          "package_name": "com.example.flutter_sigorta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVRE24IKSmEy2QOB88xgZkX9Nrmo0KOSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

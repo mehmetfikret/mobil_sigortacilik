@@ -9,12 +9,12 @@ class TeminantDetails extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Poliçe Detayları",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -34,7 +34,7 @@ class TeminantDetails extends StatelessWidget {
                   color: const Color(0xFFF8F8F8),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.all(8),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -64,8 +64,8 @@ class TeminantDetails extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 12),
+            const Padding(
+              padding: EdgeInsets.only(left: 12),
               child: Text(
                 "Otomobil sahibinin detayları",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -83,7 +83,7 @@ class TeminantDetails extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: RichText(
-                      text: TextSpan(children: [
+                      text: const TextSpan(children: [
                     TextSpan(
                       text: "Mehmet Fikret\n",
                       style: TextStyle(color: Colors.black,),
@@ -97,8 +97,8 @@ class TeminantDetails extends StatelessWidget {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 12),
+            const Padding(
+              padding: EdgeInsets.only(left: 12),
               child: Text(
                 "Sigorta Bileşenleri",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -113,8 +113,8 @@ class TeminantDetails extends StatelessWidget {
                   color: const Color(0xFFF8F8F8),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -127,10 +127,10 @@ class TeminantDetails extends StatelessWidget {
             ),
             
             Padding(
-                padding: EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16),
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -144,6 +144,10 @@ class TeminantDetails extends StatelessWidget {
                                 ),
                               );*/
                             },
+                            
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 105, 43, 118)),
                             child: Padding(
                               padding: EdgeInsets.symmetric(vertical: 12.0),
                               child: Text(
@@ -152,10 +156,6 @@ class TeminantDetails extends StatelessWidget {
                                     TextStyle(color: Colors.white, fontSize: 18),
                               ),
                             ),
-                            
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Color.fromARGB(255, 105, 43, 118)),
                           ),
                         ),
                       ],
@@ -163,7 +163,7 @@ class TeminantDetails extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10,)
+              const SizedBox(height: 10,)
 
           ],
         ),

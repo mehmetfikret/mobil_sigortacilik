@@ -8,13 +8,13 @@ class Yazilar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 255,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Container(
               width: 350,
               decoration: BoxDecoration(
@@ -26,7 +26,7 @@ class Yazilar extends StatelessWidget {
                         .withOpacity(0.5), // Gölgenin rengi ve opaklığı
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: Offset(0, 3), // Gölgenin konumu (x, y)
+                    offset: const Offset(0, 3), // Gölgenin konumu (x, y)
                   ),
                 ],
               ),
@@ -41,7 +41,7 @@ class Yazilar extends StatelessWidget {
                       alignment: Alignment.center,
                       children: [
                         Ink.image(
-                          image: AssetImage("assets/images/yolda_kalmis.jpg"),
+                          image: const AssetImage("assets/images/yolda_kalmis.jpg"),
                           height: 100,
                           fit: BoxFit.fill,
                         ),
@@ -53,7 +53,7 @@ class Yazilar extends StatelessWidget {
                     child: Stack(
                       children: [
                         RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             children: [
                               TextSpan(
                                   text: "ARABANIZ YOLDA MI KALDI..?\n",
@@ -71,17 +71,17 @@ class Yazilar extends StatelessWidget {
                       ],
                     ),
                   ),
-                  ButtonBar(
+                  OverflowBar(
                     alignment: MainAxisAlignment.start,
                     children: [
                       TextButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => YazilarDetails()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const YazilarDetails()));
                         },
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.deepPurple,
                             foregroundColor: Colors.white),
-                        child: Text(
+                        child: const Text(
                           "Hizmete Gözat",
                           style: TextStyle(fontSize: 16),
                         ),

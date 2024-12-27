@@ -6,6 +6,8 @@ import 'package:flutter_sigorta/home/insurances/credit_Card/odeme_basarili.dart'
 
 
 class MyCardsPage extends StatefulWidget {
+  const MyCardsPage({super.key});
+
   @override
   _MyCardsPageState createState() => _MyCardsPageState();
 }
@@ -57,7 +59,7 @@ class _MyCardsPageState extends State<MyCardsPage>
   void initState() {
     super.initState();
     _flipAnimationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 350));
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 350));
     _flipAnimation =
         Tween<double>(begin: 0, end: 1).animate(_flipAnimationController)
           ..addListener(() {
@@ -75,7 +77,7 @@ class _MyCardsPageState extends State<MyCardsPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Kart Bilgileri'),
+        title: const Text('Kart Bilgileri'),
         backgroundColor: Colors.white,
       ),
       body: SafeArea(
@@ -101,7 +103,7 @@ class _MyCardsPageState extends State<MyCardsPage>
                 flex: 1,
                 child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   height: double.infinity,
                   child: SingleChildScrollView(
                     child: Column(
@@ -118,7 +120,7 @@ class _MyCardsPageState extends State<MyCardsPage>
                           keyboardType: TextInputType.number,
                           controller: _cardNumberController,
                           maxLength: 16,                       
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Kart Numarası',
                             icon: Icon(Icons.numbers),
                           ),
@@ -126,7 +128,7 @@ class _MyCardsPageState extends State<MyCardsPage>
                         TextField(
                           keyboardType: TextInputType.name,
                           controller: _cardHolderNameController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Kart Sahibi',
                             icon: Icon(Icons.person),
                           ),
@@ -139,13 +141,13 @@ class _MyCardsPageState extends State<MyCardsPage>
                                 keyboardType: TextInputType.number,
                                 controller: _cardExpiryController,
                                 //maxLength: 4,
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                             hintText: 'Valid/THRU',
                             icon: Icon(Icons.date_range_outlined),                       
                           ),
                               ),
                             ),
-                            SizedBox(width: 16),
+                            const SizedBox(width: 16),
                             Expanded(
                               flex: 1,
                               child: TextField(
@@ -153,18 +155,18 @@ class _MyCardsPageState extends State<MyCardsPage>
                                 focusNode: _cvvFocusNode,
                                 controller: _cvvController,
                                 maxLength: 3,
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                     counterText: '', hintText: 'CVV'),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 27,),
+                        const SizedBox(height: 27,),
                         Padding(
-                padding: EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16),
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -174,10 +176,14 @@ class _MyCardsPageState extends State<MyCardsPage>
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(     
-                                  builder: (context) => OdemeBasarili(),
+                                  builder: (context) => const OdemeBasarili(),
                                 ),
                               );
                             },
+                            
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 105, 43, 118)),
                             child: Padding(
                               padding: EdgeInsets.symmetric(vertical: 12.0),
                               child: Text(
@@ -186,10 +192,6 @@ class _MyCardsPageState extends State<MyCardsPage>
                                     TextStyle(color: Colors.white, fontSize: 18),
                               ),
                             ),
-                            
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Color.fromARGB(255, 105, 43, 118)),
                           ),
                         ),
                       ],

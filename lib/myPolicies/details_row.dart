@@ -4,7 +4,7 @@ class CustomRow extends StatelessWidget {
   final String leftText;
   final String rightText;
 
-  const CustomRow({Key? key, required this.leftText, required this.rightText}) : super(key: key);
+  const CustomRow({super.key, required this.leftText, required this.rightText});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +16,14 @@ class CustomRow extends StatelessWidget {
             children: [
               TextSpan(
                 text: leftText,
-                style: TextStyle(color: Colors.black54),
+                style: const TextStyle(color: Colors.black54),
               ),
             ],
           ),
         ),
         Text(
           rightText,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black),
         )
       ],

@@ -33,23 +33,32 @@ class BaseScaffold extends StatelessWidget {
         backgroundColor: Colors.white,
          actions: [
           IconButton(
-            icon: Icon(Icons.notifications_active_outlined, color: Colors.black,),
+            icon: const Icon(Icons.notifications_active_outlined, color: Colors.black,),
             onPressed: () {
               // İkonun tıklanma işlemleri buraya gelir
             },
           ),
           IconButton(
-            icon: FaIcon(FontAwesomeIcons.comments),
+            icon: const FaIcon(FontAwesomeIcons.comments),
             //icon: Icon(Icons.comment_outlined),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => YapayZekaDeneme()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const YapayZekaDeneme()));
             },
           ),
         ],
       ),
-      body: Scaffold(
+      body: const Scaffold(
         body: ModernBottomNavnar(),
       ),
+     /* floatingActionButton: Padding(
+        padding: const EdgeInsets.fromLTRB(1, 2, 1, 60),
+        child: FloatingActionButton(
+          onPressed: () {
+            // Open chatbot
+          },
+          child: Icon(Icons.help),
+        ),
+      ),*/
     );
   }
 }

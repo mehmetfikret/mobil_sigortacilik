@@ -9,12 +9,12 @@ class InsurancePrice extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Otomobil Sigortası",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -28,26 +28,26 @@ class InsurancePrice extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                style: TextStyle(color: Colors.black),
+                style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFF8F8F8),
+                    fillColor: const Color(0xFFF8F8F8),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                       borderSide: BorderSide.none,
                     ),
                     hintText: "Araç plakanızı girin",
                     hintStyle: TextStyle(color: Colors.black.withOpacity(0.7)),
-                    prefixIcon: Icon(Icons.new_label_outlined),
+                    prefixIcon: const Icon(Icons.new_label_outlined),
                     prefixIconColor: Colors.black.withOpacity(0.7)),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Center(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -57,10 +57,12 @@ class InsurancePrice extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PriceDetails(),
+                              builder: (context) => const PriceDetails(),
                             ),
                           );
                         },
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 105, 43, 118)),
                         child: Padding(
                           padding: EdgeInsets.symmetric(vertical: 12.0),
                           child: Text(
@@ -68,8 +70,6 @@ class InsurancePrice extends StatelessWidget {
                             style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 105, 43, 118)),
                       ),
                     ),
                   ],

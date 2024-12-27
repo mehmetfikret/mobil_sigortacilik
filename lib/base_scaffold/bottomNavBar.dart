@@ -24,10 +24,10 @@ class _ModernBottomNavnarState extends State<ModernBottomNavnar> {
 
   final List<Widget> _pages = [
     
-    Home(),
-    Search(),
-    MyPolicies(),
-    ProfilePage()
+    const Home(),
+    const Search(),
+    const MyPolicies(),
+    const ProfilePage()
   ];
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class _ModernBottomNavnarState extends State<ModernBottomNavnar> {
                  Colors.purple.withOpacity(0.4)
               ]
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
       ),
       GButton(
         icon: Icons.search_outlined,               
@@ -72,7 +72,7 @@ class _ModernBottomNavnarState extends State<ModernBottomNavnar> {
                  Colors.purple.withOpacity(0.4)
               ]
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
       ),
       GButton(
         icon: Icons.verified_user_sharp,               
@@ -89,7 +89,7 @@ class _ModernBottomNavnarState extends State<ModernBottomNavnar> {
                  Colors.purple.withOpacity(0.4)
               ]
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
       ),
       GButton(
         icon: Icons.account_circle,               
@@ -106,7 +106,7 @@ class _ModernBottomNavnarState extends State<ModernBottomNavnar> {
                  Colors.purple.withOpacity(0.4)
               ]
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
       ),
     ],
     

@@ -22,7 +22,7 @@ class _YapayZekaDenemeState extends State<YapayZekaDeneme> {
     super.initState();
     _model = GenerativeModel(
       model: "gemini-pro",
-      apiKey: "api_key",
+      apiKey: "AIzaSyCIurpW1YMeTHq1AN4JkOOMGH7zuAL6ewY",
     );
     _chatSession = _model.startChat();
   }
@@ -112,7 +112,7 @@ class _YapayZekaDenemeState extends State<YapayZekaDeneme> {
     return InputDecoration(
       hintText: "Mesajınızı yazın...",
       filled: true,
-      fillColor: Theme.of(context).colorScheme.surfaceVariant,
+      fillColor: Theme.of(context).colorScheme.surfaceContainerHighest,
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20),

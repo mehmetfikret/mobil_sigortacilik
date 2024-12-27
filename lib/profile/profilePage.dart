@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sigorta/profile/profile_widget.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +18,16 @@ class ProfilePage extends StatelessWidget {
           children: [
             Container(
               width: 150,
-              child: const CircleAvatar(
-                radius: 60,
-                backgroundImage: ExactAssetImage('assets/images/profiltemsili.png'),
-              ),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: Colors.black.withOpacity(0.3),
                   width: 5.0,
                 ),
+              ),
+              child: const CircleAvatar(
+                radius: 60,
+                backgroundImage: ExactAssetImage('assets/images/profiltemsili.png'),
               ),
             ),
             const SizedBox(height: 10),
@@ -36,7 +36,7 @@ class ProfilePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Mehmet Fikret",
                     style: TextStyle(
                       color: Colors.black,
@@ -57,11 +57,11 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Expanded(
+            const Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
+                  children: [
                     ProfileWidget(
                       icon: Icons.person_outline_outlined,
                       title: 'Profilim',

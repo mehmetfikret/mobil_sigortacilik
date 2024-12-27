@@ -3,6 +3,8 @@ import 'package:flutter_sigorta/home/insurances/car_insurance/ek_teminantlar.dar
 import 'package:flutter_sigorta/home/insurances/car_insurance/makeModelSelection.dart';
 
 class VerifyBikeDetailsScreen extends StatefulWidget {
+  const VerifyBikeDetailsScreen({super.key});
+
   @override
   _VerifyBikeDetailsScreenState createState() =>
       _VerifyBikeDetailsScreenState();
@@ -17,9 +19,9 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Otomobil Bilgilerini Kontrol Et'),
+        title: const Text('Otomobil Bilgilerini Kontrol Et'),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -37,7 +39,7 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
                 ),
                 child: ListTile(
                   title: Text(_selectedMakeModel),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () async {
                     final result = await Navigator.push(
                       context,
@@ -52,7 +54,7 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -64,13 +66,13 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
                   title: Text(selectedDate != null
                       ? '${selectedDate!.day}.${selectedDate!.month}.${selectedDate!.year}'
                       : 'Yeni poliçe başlangıç tarihini seçin'),
-                      trailing: Icon(Icons.calendar_today),
+                      trailing: const Icon(Icons.calendar_today),
                   onTap: () {
                     _showDatePicker(context);
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -80,17 +82,17 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
                 ),
                 child: ListTile(
                   title: Text(selectedOption ?? 'Bir seçenek belirleyin'),
-                  trailing: Icon(Icons.arrow_drop_down),
+                  trailing: const Icon(Icons.arrow_drop_down),
                   onTap: () {
                     _showOptions(context);
                   },
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16),
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -104,6 +106,10 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
                                 ),
                               );
                             },
+                            
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 105, 43, 118)),
                             child: Padding(
                               padding: EdgeInsets.symmetric(vertical: 12.0),
                               child: Text(
@@ -112,10 +118,6 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
                                     TextStyle(color: Colors.white, fontSize: 18),
                               ),
                             ),
-                            
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Color.fromARGB(255, 105, 43, 118)),
                           ),
                         ),
                       ],
@@ -150,19 +152,19 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
         return Container(
           child: Wrap(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(left: 12, top: 4),
+              const Padding(
+                padding: EdgeInsets.only(left: 12, top: 4),
                 child: Text(("Mevcut poliçe durumu"), style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
               ),
               ListTile(
-                title: Text('Geçerliliği devam eden sigorta'),
+                title: const Text('Geçerliliği devam eden sigorta'),
                 onTap: () {
                   Navigator.pop(context, 'Geçerliliği devam eden sigorta');
                 },
               ),
              SizedBox(height: 1, child: Divider(color: Colors.deepPurple.shade300,),),
               ListTile(
-                title: Text('Son 90 gün içinde süresi dolmuş'),
+                title: const Text('Son 90 gün içinde süresi dolmuş'),
                 onTap: () {
                   Navigator.pop(context, 'Son 90 gün içinde süresi dolmuş');
                 },
@@ -170,7 +172,7 @@ class _VerifyBikeDetailsScreenState extends State<VerifyBikeDetailsScreen> {
              SizedBox(height: 1, child: Divider(color: Colors.deepPurple.shade300,),),
               ListTile(
                 //leading: Icon(Icons.video_library),
-                title: Text('90 günden daha uzun bir süre önce sona ermiş'),
+                title: const Text('90 günden daha uzun bir süre önce sona ermiş'),
                 onTap: () {
                   Navigator.pop(context, '90 günden daha uzun bir süre önce sona ermiş');
                 },

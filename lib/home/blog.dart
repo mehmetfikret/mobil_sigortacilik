@@ -7,13 +7,13 @@ class Blog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 155,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Container(
               width: 350,
               decoration: BoxDecoration(
@@ -25,7 +25,7 @@ class Blog extends StatelessWidget {
                         .withOpacity(0.5), // Gölgenin rengi ve opaklığı
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: Offset(0, 3), // Gölgenin konumu (x, y)
+                    offset: const Offset(0, 3), // Gölgenin konumu (x, y)
                   ),
                 ],
               ),
@@ -39,7 +39,7 @@ class Blog extends StatelessWidget {
                       alignment: Alignment.center,
                       children: [
                         Ink.image(
-                          image: AssetImage("assets/images/blob.jpg"),
+                          image: const AssetImage("assets/images/blob.jpg"),
                           height: 130,
                           fit: BoxFit.fill,
                         ),

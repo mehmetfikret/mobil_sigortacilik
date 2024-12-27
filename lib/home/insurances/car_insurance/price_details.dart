@@ -47,12 +47,12 @@ class _PriceDetailsState extends State<PriceDetails> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Detaylar",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context);
             },
@@ -99,7 +99,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 // Seçilen seçeneğin dizinini depolamak için değişken
@@ -135,7 +135,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                                   _value = val as int;
                                 });
                               },
-                              title: Row(
+                              title: const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -151,7 +151,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                               subtitle: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(
                                         Icons.check,
@@ -163,7 +163,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                                       Text("Sizin aracınıza verilen hasarları kapsar"),
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.check, size: 18), // Tik ikonu
                                       SizedBox(
@@ -177,11 +177,11 @@ class _PriceDetailsState extends State<PriceDetails> {
                                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SeeBenefits(),
+                              builder: (context) => const SeeBenefits(),
                             ),
                           );
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         "Ayrıntıları İncele",
                                         style: TextStyle(
                                             fontSize: 16,
@@ -199,7 +199,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                                         val as int; // int'e dönüştürme işlemi
                                   });
                                 },
-                                title: Row(
+                                title: const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -215,7 +215,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                                 subtitle: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Row(
+                                    const Row(
                                       children: [
                                         Icon(Icons.check,
                                             size: 18), // Tik ikonu
@@ -225,7 +225,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                                         Text("Sizin aracınıza verilen hasarları kapsar"),
                                       ],
                                     ),
-                                    Row(
+                                    const Row(
                                       children: [
                                         Icon(Icons.close_rounded,
                                             size: 18), // Tik ikonu
@@ -238,7 +238,7 @@ class _PriceDetailsState extends State<PriceDetails> {
                                     ),
                                     TextButton(
                                         onPressed: () {},
-                                        child: Text(
+                                        child: const Text(
                                           "Ayrıntıları İncele",
                                           style: TextStyle(
                                               fontSize: 16,
@@ -250,10 +250,10 @@ class _PriceDetailsState extends State<PriceDetails> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 16),
+                        padding: const EdgeInsets.only(top: 16),
                         child: Center(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            padding: const EdgeInsets.symmetric(horizontal: 16.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -268,6 +268,9 @@ class _PriceDetailsState extends State<PriceDetails> {
                                         ),
                                       );
                                     },
+                                    style: ElevatedButton.styleFrom(
+                                        backgroundColor:
+                                            const Color.fromARGB(255, 105, 43, 118)),
                                     child: Padding(
                                       padding:
                                           EdgeInsets.symmetric(vertical: 12.0),
@@ -277,9 +280,6 @@ class _PriceDetailsState extends State<PriceDetails> {
                                             color: Colors.white, fontSize: 18),
                                       ),
                                     ),
-                                    style: ElevatedButton.styleFrom(
-                                        backgroundColor:
-                                            Color.fromARGB(255, 105, 43, 118)),
                                   ),
                                 ),
                               ],

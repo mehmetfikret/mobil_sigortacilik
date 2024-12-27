@@ -22,14 +22,14 @@ class MessageWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isFromUser
                     ? Theme.of(context).colorScheme.primary.withOpacity(0.9)
-                    : Theme.of(context).colorScheme.surfaceVariant,
+                    : Theme.of(context).colorScheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(isFromUser ? 18 : 4),
                   topRight: Radius.circular(isFromUser ? 4 : 18),
-                  bottomLeft: Radius.circular(18),
-                  bottomRight: Radius.circular(18),
+                  bottomLeft: const Radius.circular(18),
+                  bottomRight: const Radius.circular(18),
                 ),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
                     blurRadius: 8,

@@ -8,12 +8,12 @@ class YazilarDetails extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Ayrıntılarr",
+        title: const Text(
+          "Ayrıntılar",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -32,7 +32,7 @@ class YazilarDetails extends StatelessWidget {
                   height: size.height * 0.2,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         image: AssetImage("assets/images/yolda_kalmis.jpg"),
                         fit: BoxFit.fill),
                   ),

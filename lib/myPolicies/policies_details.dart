@@ -11,12 +11,12 @@ class PoliciesDetails extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Poliçe Detayları",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -34,7 +34,7 @@ class PoliciesDetails extends StatelessWidget {
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: AssetImage("assets/images/mercedes1.jpg"),
                     fit: BoxFit.cover,
                   ),
@@ -50,7 +50,7 @@ class PoliciesDetails extends StatelessWidget {
                   color: const Color(0xFFF8F8F8),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.all(8),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,8 +80,8 @@ class PoliciesDetails extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 12),
+            const Padding(
+              padding: EdgeInsets.only(left: 12),
               child: Text(
                 "Otomobil sahibinin detayları",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -99,7 +99,7 @@ class PoliciesDetails extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: RichText(
-                      text: TextSpan(children: [
+                      text: const TextSpan(children: [
                     TextSpan(
                       text: "Mehmet Fikret\n",
                       style: TextStyle(color: Colors.black,),
@@ -113,8 +113,8 @@ class PoliciesDetails extends StatelessWidget {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 12),
+            const Padding(
+              padding: EdgeInsets.only(left: 12),
               child: Text(
                 "Ödeme",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -134,10 +134,10 @@ class PoliciesDetails extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Google Pay"),
+                      const Text("Google Pay"),
                       TextButton.icon(onPressed: () {
                         
-                      }, icon: FaIcon(FontAwesomeIcons.google, size: 18,), label: Text("Pay"))
+                      }, icon: const FaIcon(FontAwesomeIcons.google, size: 18,), label: const Text("Pay"))
                     ],
                   )
                 ),

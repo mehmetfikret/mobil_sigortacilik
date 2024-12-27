@@ -27,14 +27,14 @@ class Home extends StatelessWidget {
                     child: SliderScreen(),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10),
                       child: Text("Hizmetler",
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.bold)),
@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
       
@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
                   shrinkWrap: true,
                   crossAxisCount: 3,
                   childAspectRatio: 2 / 2,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   children: [
                     _insurances(Icons.directions_bike, 'Bisiklet\n sigortası',
                         Colors.lightGreen.shade300),
@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => InsurancePrice(),
+                            builder: (context) => const InsurancePrice(),
                           ),
                         );
                       },
@@ -84,15 +84,15 @@ class Home extends StatelessWidget {
                   ],
                 ),
       
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
       
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10),
                       child: Text("Sigorta Nasıl İşler",
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.bold)),
@@ -106,21 +106,21 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
       
-                SizedBox(
+                const SizedBox(
                   child: Yazilar(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10),
                       child: Text("Blog",
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.bold)),
@@ -135,18 +135,20 @@ class Home extends StatelessWidget {
                   ],
                 ),
       
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
       
-                SizedBox(
+                const SizedBox(
                   child: Blog(),
                 ),
+                
               ],
             )
           ],
         ),
-      ),
+        
+      ),   
     );
   }
 
@@ -154,7 +156,7 @@ class Home extends StatelessWidget {
     return Card(
       elevation: 2,
       color: color,
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -164,10 +166,10 @@ class Home extends StatelessWidget {
               size: 40,
               color: Colors.black.withOpacity(0.7),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               textAlign: TextAlign.center,
             ),
           ],

@@ -116,14 +116,14 @@ class MyPolicies extends StatelessWidget {
 
     */
     return ListView(
-  padding: EdgeInsets.all(8),
+  padding: const EdgeInsets.all(8),
   children: [
     GestureDetector(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PoliciesDetails(),
+            builder: (context) => const PoliciesDetails(),
           ),
         );
       },
@@ -141,13 +141,13 @@ class MyPolicies extends StatelessWidget {
               width: 150,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage("assets/images/1.png"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(width: 5),
+            const SizedBox(width: 5),
             Flexible(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,20 +163,20 @@ class MyPolicies extends StatelessWidget {
                               child: Container(
                                 width: 6,
                                 height: 5,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: Colors.green,
                                 ),
                               ),
                             ),
-                            TextSpan(
+                            const TextSpan(
                               text: "Aktif",
                               style: TextStyle(color: Colors.green),
                             ),
                           ],
                         ),
                       ),
-                      Text(
+                      const Text(
                         "₺150.00",
                         style: TextStyle(
                           color: Colors.black,
@@ -185,23 +185,23 @@ class MyPolicies extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     "Otomobil Sigortası",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Otomobil numarası: GJ971235 ",
                     style: TextStyle(
-                      color: const Color.fromARGB(221, 77, 64, 64),
+                      color: Color.fromARGB(221, 77, 64, 64),
                     ),
                     maxLines: 3,
                   ),
-                  Text(
+                  const Text(
                     "08.05.2024",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
                       color: Colors.black,
                       fontWeight: FontWeight.w400,
@@ -220,7 +220,7 @@ class MyPolicies extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PoliciesDetails(),
+            builder: (context) => const PoliciesDetails(),
           ),
         );
       },
@@ -238,13 +238,13 @@ class MyPolicies extends StatelessWidget {
               width: 150,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage("assets/images/2.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(width: 5),
+            const SizedBox(width: 5),
             Flexible(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -260,20 +260,20 @@ class MyPolicies extends StatelessWidget {
                               child: Container(
                                 width: 6,
                                 height: 5,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: Colors.green,
                                 ),
                               ),
                             ),
-                            TextSpan(
+                            const TextSpan(
                               text: "Aktif",
                               style: TextStyle(color: Colors.green),
                             ),
                           ],
                         ),
                       ),
-                      Text(
+                      const Text(
                         "₺200.00",
                         style: TextStyle(
                           color: Colors.black,
@@ -282,23 +282,23 @@ class MyPolicies extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     "Sağlık Sigortası",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Sigorta numarası: GH671245 ",
                     style: TextStyle(
-                      color: const Color.fromARGB(221, 77, 64, 64),
+                      color: Color.fromARGB(221, 77, 64, 64),
                     ),
                     maxLines: 3,
                   ),
-                  Text(
+                  const Text(
                     "15.06.2024",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
                       color: Colors.black,
                       fontWeight: FontWeight.w400,

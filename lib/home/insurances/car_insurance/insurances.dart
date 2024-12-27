@@ -11,14 +11,14 @@ class Insurances extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       height: 300,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
       ),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: GridView(
-          physics: NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, mainAxisExtent: 140, crossAxisSpacing: 10),
           children: [
             GestureDetector(
@@ -26,7 +26,7 @@ class Insurances extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InsurancePrice(), 
+        builder: (context) => const InsurancePrice(), 
       ),
     );
   },
@@ -40,7 +40,7 @@ class Insurances extends StatelessWidget {
                   children: [                
                     Container(
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.white),
-                      child: ClipRRect(
+                      child: const ClipRRect(
                         child: Icon(
                           Icons.directions_bike,
                           size: 45,
@@ -48,7 +48,7 @@ class Insurances extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
+                    const Text(
                       textAlign: TextAlign.center,
                       "Bike\n insurance",
                       style: TextStyle(color: Colors.white, fontSize: 18),
@@ -67,7 +67,7 @@ class Insurances extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
-                    child: ClipRRect(
+                    child: const ClipRRect(
                       child: Icon(
                         Icons.home,
                         size: 55,
@@ -75,7 +75,7 @@ class Insurances extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.center,
                     "Bike\n insurance",
                     style: TextStyle(color: Colors.white, fontSize: 18),
@@ -93,7 +93,7 @@ class Insurances extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
-                    child: ClipRRect(
+                    child: const ClipRRect(
                       child: Icon(
                         Icons.home,
                         size: 55,
@@ -101,7 +101,7 @@ class Insurances extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.center,
                     "Bike\n insurance",
                     style: TextStyle(color: Colors.white, fontSize: 18),
@@ -121,7 +121,7 @@ class Insurances extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
-                    child: ClipRRect(
+                    child: const ClipRRect(
                       child: Icon(
                         Icons.home,
                         size: 55,
@@ -129,7 +129,7 @@ class Insurances extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.center,
                     "Bike\n insurance",
                     style: TextStyle(color: Colors.white, fontSize: 18),
@@ -150,7 +150,7 @@ class Insurances extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
-                    child: ClipRRect(
+                    child: const ClipRRect(
                       child: Icon(
                         Icons.home,
                         size: 55,
@@ -158,7 +158,7 @@ class Insurances extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.center,
                     "Bike\n insurance",
                     style: TextStyle(color: Colors.white, fontSize: 18),
@@ -172,14 +172,14 @@ class Insurances extends StatelessWidget {
               child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color.fromARGB(255, 5, 108, 77),
+                color: const Color.fromARGB(255, 5, 108, 77),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
-                    child: ClipRRect(
+                    child: const ClipRRect(
                       child: Icon(
                         Icons.home,
                         size: 55,
@@ -187,7 +187,7 @@ class Insurances extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.center,
                     "Bike\n insurance",
                     style: TextStyle(color: Colors.white, fontSize: 18),

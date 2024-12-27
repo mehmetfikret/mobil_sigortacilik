@@ -15,11 +15,13 @@ class MakeModelSelectionScreen extends StatelessWidget {
     'Citroen C-Elyses'
   ];
 
+   MakeModelSelectionScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Marka/Model Seç'),
+        title: const Text('Marka/Model Seç'),
       ),
       body: ListView.builder(
         itemCount: makeModelOptions.length,
@@ -29,7 +31,7 @@ class MakeModelSelectionScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(makeModelOptions[index]),
-                Divider(),
+                const Divider(),
               ],
             ),
             onTap: () {
