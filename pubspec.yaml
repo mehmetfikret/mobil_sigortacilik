@@ -44,8 +44,11 @@ dependencies:
   dash_chat_2: ^0.0.21
   google_generative_ai: ^0.4.6
   flutter_markdown: ^0.7.4+3
+<<<<<<< HEAD
   line_awesome_flutter: ^3.0.1
   firebase_core: ^3.4.0
+=======
+>>>>>>> 36bfc066338506fe88fd3159317a979c9b786683
   
   
 

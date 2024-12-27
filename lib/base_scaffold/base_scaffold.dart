@@ -42,7 +42,11 @@ class BaseScaffold extends StatelessWidget {
             icon: const FaIcon(FontAwesomeIcons.comments),
             //icon: Icon(Icons.comment_outlined),
             onPressed: () {
+<<<<<<< HEAD
               Navigator.push(context, MaterialPageRoute(builder: (context) => const YapayZekaDeneme()));
+=======
+              Navigator.push(context, MaterialPageRoute(builder: (context) => YapayZekaDeneme()));
+>>>>>>> 36bfc066338506fe88fd3159317a979c9b786683
             },
           ),
         ],

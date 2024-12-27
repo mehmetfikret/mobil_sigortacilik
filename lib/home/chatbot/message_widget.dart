@@ -22,6 +22,7 @@ class MessageWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isFromUser
                     ? Theme.of(context).colorScheme.primary.withOpacity(0.9)
+<<<<<<< HEAD
                     : Theme.of(context).colorScheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(isFromUser ? 18 : 4),
@@ -30,6 +31,16 @@ class MessageWidget extends StatelessWidget {
                   bottomRight: const Radius.circular(18),
                 ),
                 boxShadow: const [
+=======
+                    : Theme.of(context).colorScheme.surfaceVariant,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(isFromUser ? 18 : 4),
+                  topRight: Radius.circular(isFromUser ? 4 : 18),
+                  bottomLeft: Radius.circular(18),
+                  bottomRight: Radius.circular(18),
+                ),
+                boxShadow: [
+>>>>>>> 36bfc066338506fe88fd3159317a979c9b786683
                   BoxShadow(
                     color: Colors.black12,
                     blurRadius: 8,
